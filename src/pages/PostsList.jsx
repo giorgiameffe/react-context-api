@@ -1,28 +1,15 @@
-// Hooks
-import { useEffect, useState } from "react";
-// Axios
-import axios from "axios";
 // Link
 import { Link } from "react-router-dom";
+// useContext
+import { useContext } from "react";
+// PostsContext
+import PostsContext from "../contexts/PostsContext";
 
 // Posts list
 
-const postsEndpoint = 'https://jsonplaceholder.typicode.com/posts';
-
 export default function PostsList() {
 
-    const [posts, setPosts] = useState([]);
-
-    function getPosts() {
-        axios.get(postsEndpoint)
-            .then(res => {
-                setPosts(res.data)
-            })
-            .catch(error => alert('Qualcosa è andato storto, riprova più tardi'))
-    }
-
-    useEffect(getPosts, []);
-
+    const { posts } = useContext(PostsContext);
 
     return (
         <ul className="posts-container">
