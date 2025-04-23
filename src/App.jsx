@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from './pages/Homepage.jsx';
 // About us
 import AboutUs from './pages/AboutUs.jsx';
-// Posts list
+// Posts page
 import PostsPage from './pages/PostsPage.jsx';
 // Default Layout
 import DefaultLayout from "./layouts/DefaultLayout.jsx";
@@ -12,9 +12,8 @@ import DefaultLayout from "./layouts/DefaultLayout.jsx";
 import SinglePost from "./pages/SinglePost.jsx";
 // Not Found
 import NotFound from "./pages/NotFound.jsx";
-// Posts Provider
+// importazione dei Provider per andare a wrappare i componenti che accederanno a questi contesti
 import { PostsProvider } from "./contexts/PostsContext.jsx";
-
 import { AlertProvider } from "./contexts/AlertContext.jsx";
 
 function App() {
