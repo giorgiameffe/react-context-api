@@ -1,0 +1,145 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    font-family: "PT Serif", serif;
+    background-color: #afb5cb;
+    padding-bottom: 70px;
+}
+
+/* Navbar */
+
+.nav-container ul {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+
+.nav-container .active {
+    background-color: #879ade;
+    color: #0f1b45;
+    font-weight: bold;
+}
+
+.nav-container a {
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* Links */
+
+.nav-links {
+    background-color: #45548b;
+    padding: 50px 0px;
+    font-size: 18px;
+}
+
+/* Main */
+
+.main-container {
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+h2 {
+    color: #0f1b45;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 60px;
+
+}
+
+/* post section */
+
+/* posts page */
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.single-post {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: calc((100% - 60px) / 4);
+    background-color: #f8f8f9;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.single-post h3 {
+    color: #390583;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.single-post a {
+    color: #9e31c5;
+    text-align: center;
+}
+
+/* post page */
+
+.post-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* buttons */
+
+.post-section button {
+    font-family: "PT Serif", serif;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #0f1b45;
+    background-color: #ffffff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* loading */
+
+.loading {
+    font-size: 20px;
+}
+
+/* Not found */
+
+.not-found {
+    text-align: center;
+}
+
+.not-found h1 {
+    margin-bottom: 70px;
+}
+
+.not-found-link {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #0f1b45;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.not-found-link:hover {
+    background-color: #45548b;
+    color: #ffffff;
+}
