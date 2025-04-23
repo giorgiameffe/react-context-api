@@ -5,7 +5,7 @@ import Homepage from './pages/Homepage.jsx';
 // About us
 import AboutUs from './pages/AboutUs.jsx';
 // Posts list
-import PostsList from './pages/PostsList.jsx';
+import PostsPage from './pages/PostsPage.jsx';
 // Default Layout
 import DefaultLayout from "./layouts/DefaultLayout.jsx";
 // Single post
@@ -23,7 +23,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Homepage />} />
             <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/posts" element={<PostsList />} />
+            <Route path="/posts" element={<PostsPage />} />
             <Route path="/posts/:id" element={<SinglePost />} />
           </Route>
           {/* Rotta catch all */}
