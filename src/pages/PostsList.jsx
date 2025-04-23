@@ -1,4 +1,4 @@
-// PostsContext
+// usePosts
 import { usePosts } from "../contexts/PostsContext";
 // Postcard
 import PostCard from "../components/PostCard";

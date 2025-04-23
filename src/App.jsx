@@ -15,24 +15,28 @@ import NotFound from "./pages/NotFound.jsx";
 // Posts Provider
 import { PostsProvider } from "./contexts/PostsContext.jsx";
 
+import { AlertProvider } from "./contexts/AlertContext.jsx";
+
 function App() {
 
   return (
+    <AlertProvider>
+      <PostsProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<DefaultLayout />}>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/posts" element={<PostsPage />} />
+              <Route path="/posts/:id" element={<SinglePost />} />
+            </Route>
+            {/* Rotta catch all */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </PostsProvider>
+    </AlertProvider>
 
-    <PostsProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />}>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/posts" element={<PostsPage />} />
-            <Route path="/posts/:id" element={<SinglePost />} />
-          </Route>
-          {/* Rotta catch all */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </PostsProvider>
   )
 }
 
