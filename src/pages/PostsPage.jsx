@@ -1,9 +1,9 @@
 // Posts list
 import PostsList from "./PostsList";
-
+// Alert
 import Alert from "../components/Alert.jsx";
 
-// Post Page
+// Posts Page
 
 export default function PostsPage() {
 

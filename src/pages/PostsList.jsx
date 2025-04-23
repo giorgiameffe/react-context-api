@@ -1,6 +1,6 @@
-// usePosts
+// importare custom Hook usePosts per recuperare i dati 
 import { usePosts } from "../contexts/PostsContext";
-// Postcard
+// PostCard
 import PostCard from "../components/PostCard";
 
 // Posts list

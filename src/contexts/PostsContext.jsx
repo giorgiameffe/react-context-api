@@ -6,6 +6,8 @@ import { useState, useEffect, useContext, createContext } from "react";
 // Definizione del contesto => Posts Context
 const PostsContext = createContext();
 
+// Componente in cui sono presenti tutti i dati che si vogliono rendere disponibili 
+// agli altri componenti al suo interno
 function PostsProvider({ children }) {
 
     const postsEndpoint = 'https://jsonplaceholder.typicode.com/posts';
@@ -29,7 +31,7 @@ function PostsProvider({ children }) {
     )
 }
 
-// Definire hook per consumare il contesto 
+// Definire custom hook per consumare il contesto 
 
 function usePosts() {
 

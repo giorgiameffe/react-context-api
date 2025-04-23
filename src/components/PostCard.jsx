@@ -1,6 +1,7 @@
+// Link
 import { Link } from "react-router-dom";
 
-// Post Card
+// PostCard
 
 export default function PostCard({ post }) {
 

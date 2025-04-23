@@ -14,7 +14,7 @@ export default function SinglePost() {
 
     const { id } = useParams();
 
-    // useNavigate per tornare alla pagina precedente
+    // useNavigate per navigare tra pagine senza il click su un link
     const navigate = useNavigate();
 
     const [singlePost, setSinglePost] = useState(null);

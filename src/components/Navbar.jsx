@@ -1,7 +1,7 @@
 // Navlink 
 import { NavLink } from "react-router-dom";
 
-// Navbar 
+// Navbar
 
 export default function Navbar() {
 

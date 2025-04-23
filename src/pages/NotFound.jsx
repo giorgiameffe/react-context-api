@@ -1,4 +1,6 @@
+// Link
 import { Link } from "react-router-dom"
+
 // Not found
 
 export default function NotFound() {
