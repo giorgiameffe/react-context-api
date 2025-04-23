@@ -12,12 +12,15 @@ import DefaultLayout from "./layouts/DefaultLayout.jsx";
 import SinglePost from "./pages/SinglePost.jsx";
 // Not Found
 import NotFound from "./pages/NotFound.jsx";
+// Posts Context
+import PostsContext from "./contexts/PostsContext.jsx";
 
 
 function App() {
 
   return (
-    <>
+
+    <PostsContext.Provider value="">
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
@@ -30,7 +33,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </PostsContext.Provider>
   )
 }
 

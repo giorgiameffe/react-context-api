@@ -25,16 +25,13 @@ export default function PostsList() {
 
 
     return (
-        <div className="main-container">
-            <h2>Posts</h2>
-            <ul className="posts-container">
-                {posts.map(post =>
-                    <li key={post.id} className="single-post">
-                        <h3>{post.title}</h3>
-                        <Link to={`/posts/${post.id}`}>Clicca qui per maggiori dettagli</Link>
-                    </li>
-                )}
-            </ul>
-        </div>
+        <ul className="posts-container">
+            {posts.map(post =>
+                <li key={post.id} className="single-post">
+                    <h3>{post.title}</h3>
+                    <Link to={`/posts/${post.id}`}>Clicca qui per maggiori dettagli</Link>
+                </li>
+            )}
+        </ul>
     )
 }

@@ -7,9 +7,8 @@ export default function PostsPage() {
 
     return (
         <div className="main-container">
-            <h2>Lista dei posts:</h2>
+            <h2>Posts Blog</h2>
             <PostsList />
         </div>
-
     )
 }
