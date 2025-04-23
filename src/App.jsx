@@ -12,32 +12,14 @@ import DefaultLayout from "./layouts/DefaultLayout.jsx";
 import SinglePost from "./pages/SinglePost.jsx";
 // Not Found
 import NotFound from "./pages/NotFound.jsx";
-// Posts Context
-import PostsContext from "./contexts/PostsContext.jsx";
-// Hooks
-import { useState, useEffect } from "react";
-// Axios
-import axios from "axios";
+// Posts Provider
+import { PostsProvider } from "./contexts/PostsContext.jsx";
 
 function App() {
 
-  const postsEndpoint = 'https://jsonplaceholder.typicode.com/posts';
-
-  const [posts, setPosts] = useState([]);
-
-  function getPosts() {
-    axios.get(postsEndpoint)
-      .then(res => {
-        setPosts(res.data)
-      })
-      .catch(error => alert('Qualcosa è andato storto, riprova più tardi'))
-  }
-
-  useEffect(getPosts, []);
-
   return (
 
-    <PostsContext.Provider value={{ posts, setPosts }}>
+    <PostsProvider>
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
@@ -50,7 +32,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </PostsContext.Provider>
+    </PostsProvider>
   )
 }
 

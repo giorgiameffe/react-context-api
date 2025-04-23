@@ -1,17 +1,13 @@
-// Link
-import { Link } from "react-router-dom";
-// useContext
-import { useContext } from "react";
 // PostsContext
-import PostsContext from "../contexts/PostsContext";
-
+import { usePosts } from "../contexts/PostsContext";
+// Postcard
 import PostCard from "../components/PostCard";
 
 // Posts list
 
 export default function PostsList() {
 
-    const { posts } = useContext(PostsContext);
+    const { posts } = usePosts();
 
     return (
         <ul className="posts-container">
