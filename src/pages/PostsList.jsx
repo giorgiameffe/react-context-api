@@ -5,6 +5,8 @@ import { useContext } from "react";
 // PostsContext
 import PostsContext from "../contexts/PostsContext";
 
+import PostCard from "../components/PostCard";
+
 // Posts list
 
 export default function PostsList() {
@@ -13,12 +15,7 @@ export default function PostsList() {
 
     return (
         <ul className="posts-container">
-            {posts.map(post =>
-                <li key={post.id} className="single-post">
-                    <h3>{post.title}</h3>
-                    <Link to={`/posts/${post.id}`}>Clicca qui per maggiori dettagli</Link>
-                </li>
-            )}
+            {posts.map(post => <PostCard key={post.id} post={post} />)}
         </ul>
     )
 }
